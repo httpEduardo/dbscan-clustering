@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClusterSprout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">DBSCAN clustering</p>
+        <h1>ClusterSprout</h1>
+        <p>Group points with density-based clustering.</p>
+      </header>
+      <section class="panel">
+        <textarea id="pointsInput" rows="7">[[1,1],[1.2,1.1],[2,2],[8,8],[8.2,7.9],[9,8.5],[15,3]]</textarea>
+        <div class="grid">
+          <label>Epsilon <input id="epsInput" type="number" step="0.1" value="1.2" /></label>
+          <label>Min points <input id="minInput" type="number" value="2" /></label>
+        </div>
+        <button id="clusterButton">Cluster</button>
+      </section>
+      <section class="panel">
+        <h2>Clusters</h2>
+        <pre id="output"></pre>
+      </section>
+    </main>
+    <div class="sprout"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
